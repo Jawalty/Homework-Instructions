@@ -136,7 +136,7 @@ ggplot(data = dataset_name, mapping = aes(x = variable)) +
 
   a) Experiment with binwidth
 
-Try binwidths of 25, 50, and 100. Which gives you the most useful view of the data?
+Try binwidths of 25, 50, and 100. Which gives you the most useful view of the data? 25 gives you the most accurate view of the data
 ```{r price-hist-experiments}
 # Try binwidth = 25
 ggplot(data = edibnb, mapping = aes(x = price)) +
@@ -149,7 +149,7 @@ ggplot(data = edibnb, mapping = aes(x = price)) +
 # Try binwidth = 100
 ```
 
-*Which binwidth did you choose and why?*
+*Which binwidth did you choose and why?* 25 shows you the spread of the data with the most detail.
 
  b) Experiment with facet layout*
 
@@ -159,7 +159,7 @@ Try these three options:
 - `facet_wrap(~neighbourhood, ncol = 1)` - stacks vertically  
 - `facet_wrap(~neighbourhood, nrow = 1)` - arranges horizontally
 
-*Which layout did you choose and why?*
+*Which layout did you choose and why?* I kept the original neighborhood grid, the others were a sloppy representation of the data.
 
  c) Create your final visualization
 
@@ -169,7 +169,9 @@ Try these three options:
 
 Use your chosen binwidth and layout:
 ```{r final-price-histogram, eval = FALSE}
-# Your final code here
+ggplot(data = edibnb, mapping = aes(x = price)) +
+  geom_histogram(binwidth = 25) +
+  facet_wrap(~neighbourhood)
 ```
 
 *After completing Exercise 3:*
