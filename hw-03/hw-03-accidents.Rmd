@@ -1,6 +1,6 @@
 ---
 title: "HW 03 - Road traffic accidents"
-author: "[Your Name]"
+author: "Jackson Walterman"
 output: 
   tufte::tufte_html:
     css: ../lab.css
@@ -75,10 +75,10 @@ The data can be found in the **dsbox** package, and it's called `accidents`. Sin
 # Exercises
 
 1.  How many observations (rows) does the dataset have? Instead of hard coding the number in your answer, use inline code.
-
+The data set has `r nrow(accidents)`.
 
 2.  Run `View(accidents)` in your Console to view the data in the data viewer. What does each row in the dataset represent?
-
+Each row represents a car accident case that resulted in at least one casualty.
 🧶 Knit → ✅ Commit with message `"Completed Exercises 1-2"` → ⬆️ Push
 
 3. Create a plot that shows the distribution of accidents throughout the day, comparing weekdays vs. weekends and by accident severity.
